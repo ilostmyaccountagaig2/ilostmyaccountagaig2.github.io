@@ -555,7 +555,7 @@ function showMessageMe() {
 
         try {
             const payload = {
-                content: `**New message from ${username}**\n\n${message}`
+                content: `**New message from user  "${username}**\n\n${message}"`
             };
 
             const res = await fetch(URL, {

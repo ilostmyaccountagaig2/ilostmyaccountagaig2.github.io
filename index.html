@@ -174,17 +174,16 @@ progress {
         <div id="search-bar">
             <input type="text" id="search-input" placeholder="Search current content">
         </div>
-        <div id="content">Clique em uma aba para começar</div>
+        <div id="content">You aren't supposed to see this.</div>
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script>
 // ==================== DATA ====================
 const data = {
     "Every HOURS sound": `
 Invader:
+
 Slash:
 class1attackswing3: 5704938219 first m1
 class1attackswing2: 5704937889 second m1
@@ -208,7 +207,10 @@ class1buffloop: 5704963357 plays ambiently
 class1buffcrit: 5704962690 plays if hit
 class1buffend: 5704962943 plays on end
 
+class1death: 5705023651 plays on death
+
 Prophet:
+
 Stab:
 class2attackswing1: 5707187822 first m1
 class2attackswing2: 5707191470 second m1
@@ -233,7 +235,10 @@ Regeneration:
 class2healstart: 5707328418 plays when starting
 class2healperiodic: 5707327500 plays every time you heal
 
-Witness
+class2death: 5707272570 plays when spear flies away
+
+Witness:
+
 Bash:
 class3attackswing1: 5707457031 plays on first m1
 class3attackswing2: 5707457876 plays on second m1
@@ -259,7 +264,10 @@ Smite:
 class3lightningcharge: 5707694105 plays on use 3 times
 class3lightning: 5707693311 plays on release
 
+class3death: 5707508696 plays on death
+
 Dreamer:
+
 Sear:
 class8attack1: 5871667704 first m1
 class8attack2: 5871669117 second m1
@@ -280,6 +288,7 @@ class8mediumballhit: 5713017682 plays when hitting it
 `,
     "Upgrades": `
 Invader:
+
 Maim:
 class1attackswing4: 5704939932 plays on fourth m1
 class1attackhitheavy: 5704919282 plays if hit
@@ -322,6 +331,7 @@ class1envenomhit: 5705052462 plays on hit
 class1periodicdamage: 5705091465 plays on overtime
 
 Prophet:
+
 Ground Inferno Lance:
 class2burn: 5707215358 plays when burning
 
@@ -365,6 +375,86 @@ class2summonattack: 5707358897 plays when summoned attacks
 class2summonhit: 5707359456 plays when summon hits
 class2dash: 5707244905 plays when summon dashes
 class2summondie: 5707359061 plays when summon dies
+
+Witness:
+
+Under the Weather:
+class3kickstatic: 5707569220 plays on tick
+
+Tempest Navigator:
+class3kickring: 5707568611 plays on ring
+
+Thunderclap Vessel:
+class3attackswing5: 5707458472 plays twice
+
+Miniature Devil:
+class3attackcrit: 5707440509 plays on hit
+
+King’s Confines:
+class3attackzap: 5707440509 plays on chain
+
+Subspace Artifact:
+class3lightningstatic: 5707694547 plays ambiently
+
+Periastron Delta:
+class3lightningchain: 5707693740 plays on chain
+
+Neobium Coil:
+class3lightningcharge2: 5707694293 plays on smite
+
+Immortal Mantle:
+class3shieldburst: 5707753227 plays when shield explodes
+
+Spiral Conduit:
+class3shieldzap: 5707754190 plays on zap
+
+Epic Condiment:
+class3epic: 5707539547 plays on use
+class3epicloop: 5707539836 plays ambiently
+
+Photon Accelerator:
+class3hyperfire: 5707561532 plays on fire
+class3hyperbounce: 5707561128 plays when projectile bounces
+class3hyperdie: 5707561325 plays when hit
+
+Unlimited Rulebook:
+class3teleport: 5707820652 plays on use
+
+Memento Mori:
+class3memento: 5707715931 plays on use
+
+Ghom’s Last Regret:
+class3burger1: 5707496009 plays 3 times when eating
+class3burger2: 5707496471 plays when finished
+
+Decoy Deploy:
+class3decoy: 5707514720 plays on spawn
+class3decoydeath: 5707514905 plays when decoy explodes
+
+First Stage of Grief:
+class3denial: 5707529167 plays on use
+class3denialhit: 5707529376 plays on hit or if reflected
+
+Cosmic Spearhead:
+class3rocket: 5707726654 plays when fired
+class3rockethit: 5707726881 plays when rocket explodes
+
+Telamon’s Banhammer:
+class3ban: 5707486239 plays on swing
+class3banhit: 5707486452 plays on hit
+
+Builder’s Trowel:
+class3wall: 5707821394 plays on place
+class3wallhit: 5707843891 plays on hit
+
+Wings of Invention:
+class3fly: 5707554347 plays on start
+class3flyend: 5707554582 plays when landing
+
+Blackmarket Blueprints:
+class3sentry: 5707740456 plays on summon and death
+class3sentryfire: 5707740684 plays when sentry fires
+class3sentryhit: 5707740970 plays if sentry hits
 
 Dreamer:
 
@@ -488,7 +578,7 @@ function goToNextHighlight() {
     highlights[currentHighlightIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-function createTab(key, isVideoExtractor = false, isMessageMe = false) {
+function createTab(key, isMessageMe = false) {
     const div = document.createElement("div");
     div.className = "tab";
     div.textContent = key;

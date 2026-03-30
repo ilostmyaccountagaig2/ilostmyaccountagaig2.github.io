@@ -524,7 +524,7 @@ function showMessageMe() {
 <div id="message-me">
     <h2>Message Me</h2>
     <input type="text" id="discordUsername" placeholder="Your discord username">
-    <textarea id="messageText" placeholder="Write here what you want to tell me"></textarea>
+    <textarea id="messageText" placeholder="Write here what you would like to tell me"></textarea>
     <button id="sendMessageBtn">Send message</button>
     <div id="status"></div>
 </div>`;
@@ -540,12 +540,12 @@ function showMessageMe() {
 
         if (!username) {
             statusEl.style.color = '#f88';
-            statusEl.textContent = "Send your discord name so I can warn you if i fixed/added it or not";
+            statusEl.textContent = "Send your discord username so I can tell you if I'ved added it or not!!!";
             return;
         }
         if (!message) {
             statusEl.style.color = '#f88';
-            statusEl.textContent = "You need a text to send a message broski";
+            statusEl.textContent = "You need to put stuff in the message box...";
             return;
         }
 
@@ -555,7 +555,7 @@ function showMessageMe() {
 
         try {
             const payload = {
-                content: `**New message from user  "${username}**\n\n${message}"`
+                content: `**New message from user "${username}":**\n\n${message}`
             };
 
             const res = await fetch(URL, {

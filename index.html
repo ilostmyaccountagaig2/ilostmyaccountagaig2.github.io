@@ -181,7 +181,31 @@ progress {
 <script>
 // ==================== DATA ====================
 const data = {
-    "Base Moves": `
+    "Hosts": `
+Hot Rash:
+
+cloudcityspawn: 5711607055 (npc only, plays on spawn)
+
+Hot Gash:
+maulattack: 5712068349 plays on swing
+maulhit: 5712068565 plays if hit
+
+Hot Slash:
+maulattack: 5712068349 plays on swing
+maulhit: 5712068565 plays if hit
+
+Hot Flash:
+maulshield: 5712068799 plays on summoning shield
+maulshieldhit: 5712069007 plays on reflection
+
+Hot Kalash:
+class0kalash: 6609313070 plays on use
+class0kalashfire: 6609313288 plays on fire
+class4barragehit: 5707923323 plays if hit or if hits wall
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
 Invader:
 
 Slash:
@@ -220,8 +244,8 @@ class2attackswing5: 5707192223 fourth m1
 class2attackhit1: 5707138441 plays randomly when any m1 is hit
 class2attackhit2: 5707143387 plays randomly when any m1 is hit
 class2attackhit3: 5707143748 plays randomly when any m1 is hit
-class2attackhit4: 5707144936 plays randomly when any m1 is hit
-class2attackhit5: 5707145188 plays randomly when any m1 is hit
+class2attackhit4: 5707144936  plays randomly when any m1 is hit
+class2attackhit5: 5707145188  plays randomly when any m1 is hit
 class2attackhit6: 5707147077 plays randomly when any m1 is hit
 
 Heavy Strike:
@@ -231,6 +255,7 @@ class2heavyhit: 5707347793 plays when hit
 
 Dash:
 class2dash: 5707244905 plays when dashing
+
 
 Regeneration:
 class2healstart: 5707328418 plays when starting
@@ -426,7 +451,6 @@ Dreamer:
 
 class8spawn: 5713025455 plays when spawning in
 class8spawn2: 5713025702 (boss only, plays when spawning in)
-class8spawnb: 5713026064 plays when custom npc spawns
 
 Sear:
 class8attack1: 5871667704 first m1
@@ -608,7 +632,7 @@ bloxxerfire4: 5709152906 (boss only, plays when second phase nails tripped)
 bloxxernailhit: 5709157693 (plays if second phase nails hit)
 bloxxernaildie: 5709157473 (plays if second phase nail vanishes or hits wall)
 `,
-    "Upgrade Moves": `
+    "Upgrades": `
 Invader:
 
 Maim:
@@ -651,6 +675,7 @@ Envenom:
 class1envenom: 5706915047 plays on use
 class1envenomhit: 5705052462 plays on hit
 class1periodicdamage: 5705091465 plays on overtime
+______________________________________________________________
 
 Prophet:
 
@@ -697,6 +722,7 @@ class2summonattack: 5707358897 plays when summoned attacks
 class2summonhit: 5707359456 plays when summon hits
 class2dash: 5707244905 plays when summon dashes
 class2summondie: 5707359061 plays when summon dies
+______________________________________________________________
 
 Witness:
 
@@ -777,6 +803,7 @@ Blackmarket Blueprints:
 class3sentry: 5707740456 plays on summon and death
 class3sentryfire: 5707740684 plays when sentry fires
 class3sentryhit: 5707740970 plays if sentry hits
+______________________________________________________________
 
 Dreamer:
 
@@ -836,6 +863,180 @@ class8mediumballhit: 5713017682 plays when hitting it
 
 Signature Move:
 class8pianoslam: 5713020998 plays when slamming
+`,
+    "Enemies": `
+class8spawnb: 5713026064 plays if an enemy is spawned through the cheat menu
+
+Arson Agni:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Erupt:
+agnislam: 5711570973 plays on swing
+agnihit: 5711570525 plays if hit
+agnifire: 5711570215 fire ambience
+
+Double Slash:
+agniattack2: 5711574371 first swing
+agniattack1: 5711569436 second swing
+agnihit: 5711570525 plays if hit
+
+Roll:
+agniroll: 5711570744 plays on use
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Hurricane Gale:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Wind Stab:
+galeswing: 5711918955 plays on swing
+galehit: 5711918122 plays if hit
+
+Gale Slash:
+galewindblade: 5711919228 plays on fire
+galebladehit: 5711917874 plays if hit
+
+Wind Accelerator:
+galepull: 5711918751 plays when pulling
+galeswing: 5711918955 plays on swing
+galehit: 5711918122 plays if hit
+
+Air Boost:
+galeleap: 5711918475 plays on leap
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Seventh Blossom:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Consecutive Punches:
+blossompunch1: 5711661832 plays every first m1
+blossompunch2: 5711662035 plays every second m1
+blossomhit1: 5711660526 plays if first m1 hits
+blossomhit2: 5711660975 plays if second m1 hits
+
+Dropkick:
+blossomkick: 5711661282 plays on use
+blossomkickhit: 5711661576 plays if hit
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Shattered Ice:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Frost Fang
+shatterthrow: 5712248819 plays on throw
+shatterthrowhit: 5712249074 plays if hit or if touches wall
+
+Combo Strike:
+shatterattack: 5712248023 plays on swing 3 times
+shatterhit: 5712248632 plays if hit
+
+Freeze Stab
+shatterfreezeswing: 5712248432 plays on swing
+shatterfreezehit: 5712248224 plays on hit
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Sidearm Stubbs:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Shoot:
+stubbsshot: 5712263663 plays when shooting
+stubbshit: 5712263208 plays if hit or if touches wall
+
+Roll:
+stubbsroll: 5712263439 plays when rolling
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Toxic Teapot:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Noxious Spin:
+vilespin: 5712272789 plays on spin
+vilehit: 5712272573 plays if spin swing hits
+
+Vile Upper:
+vileattack: 5712272330 plays on swing
+vilehit: 5712272573 plays if hit
+
+Sword Slash:
+vileattack: 5712272330 plays on swing
+vilehit: 5712272573 plays if hit
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Unlimited Blades:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Blade Rain:
+infinitydrop: 5711997359 plays repeatedly
+infinitydrophit: 5711997561 plays on hit
+
+Blade Chomp:
+infinitychomp: 5711996081 plays on use
+infinitychompswing: 5711997181 plays on swing
+infinitychomphit: 5711996985 plays if hit
+
+Blade Raise:
+infinityrise: 5711997868 plays on rise
+infinityrisehit: 5711998052 plays if hit
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Wingless Angel:
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Spear Slash:
+nowingattack: 5712084862 plays on swing
+nowinghit: 5712085838 plays if hit
+
+Charging Angel:
+nowingcharge: 5712085119 plays on charge
+nowingchargehit: 5712085377 plays if hit
+
+Medkit:
+nowingheal: 5712085629 plays on heal
+
+cloudcitydeath: 5711596460 plays on death
+______________________________________________________________
+
+Wraith Walker
+
+cloudcityspawn: 5711607055 plays on spawn
+
+Teleport:
+wraithblink: 5712296064 plays on use
+
+Stab:
+wraithblink: 5712296064 plays on use
+wraithstab: 5712296965 plays on swing
+wraithstabhit: 5712297214 plays if hit
+
+Slash:
+wraithattack: 5712295804 plays on swing
+wraithhit: 5712296760 plays if hit
+
+Cloak:
+wraithcloak: 5712296498 plays on cloak
+
+cloudcitydeath: 5711596460 plays on death
 `,
 };
 

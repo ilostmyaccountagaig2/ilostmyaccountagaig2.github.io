@@ -314,7 +314,7 @@ class4summon: 5708064706 plays on summon
 class4turretfire: 5708106216 plays when turret fires
 class4barragehit: 5707923323 plays if projectile hits wall
 class4barragehit2: 5707923653 plays if hit
-class4summondeath: 5708065041 plays on summon death
+class4summondeath: 5708065041 plays on turret death
 
 Barrage:
 class4barragestart: 5707923973 plays on use
@@ -323,8 +323,11 @@ class4barragehit: 5707923323 plays if projectile hits wall
 class4barragehit2: 5707923653 plays if hit
 class4barrageend: 5707922885 plays when stopping
 
-class4traiton: 5708085772 plays on death
+Auto Repairs:
+class4traiton: 5708085772 plays on start
 class4traitloop: 5708085349 plays ambiently
+class4traitoff: 5708085583 plays on end
+
 class4death: 5707985774 plays when head hits ground
 ______________________________________________________________
 
@@ -461,8 +464,8 @@ Pummel:
 class9summonsmall: 7099207606 plays on summon
 class9ora: 7099208213 plays repeatedly each hit
 class9orahit: 7099208337 plays on hit
+class9block: 7099209252 plays on clash
 class9disappear: 7099209057 plays on end
-class9block: 7099209252 plays if clashed
 
 Leap:
 class9jump: 7099208793 plays on jump
@@ -471,6 +474,7 @@ class9jumpend: 7099208844 plays on land
 Easy Lover:
 class9summon: 7099207467 plays on use
 class9summonsmall: 7099207606 plays on use
+class9block: 7099209252 plays if easy lover blocks something
 class9disappear: 7099209057 plays on vanish
 
 Uppercut:
@@ -484,6 +488,7 @@ Punt:
 class9kickwindup: 7099208485 plays on use
 class9kick: 7099208731 plays on swing
 class9kickhit: 7099208672 plays on hit
+class9kickwall: 7099208602 plays if hit hits a wall
 class9summonsmall: 7099207606 plays on vanish
 class9disappear: 7099209057 plays on use and on vanish
 
@@ -1057,6 +1062,61 @@ class6giga: 5871797692 plays on use
 class6gigaloop: 5871798632 plays ambiently
 class6gigahit: 5871798352 plays if hit
 class6gigaend: 5871798029 plays on end
+______________________________________________________________
+
+Subject:
+
+literally has no sfx changes when upgraded
+______________________________________________________________
+
+Parting:
+
+The Invader’s Blade:
+class9invader: 7099208932 plays twice
+
+Walk Behind the Rows:
+class9rows: 7099207850 plays on burst
+
+The Witness’s Pick:
+class9shieldstart: 7099207781 plays on start
+class9shieldhit: 7099208015 plays if shield is hit
+class9shieldend: 7099207723 plays on shield pop
+
+The Prophet’s Crown:
+class9summon: 7099207467 plays on use
+class9summonsmall: 7099207606 plays on use
+class9block: 7099209252 plays if easy lover blocks something
+class9disappear: 7099209057 plays on vanish
+
+The Visitor’s Drill:
+class9beam: 7099209378 plays on leap
+class9beamlow: 7099209317 plays on smash
+
+Rainbow in the Dark:
+class9rainbowbounce: 7099208078 plays on bounce
+class9rainbowhit: 7099207941 plays if hit
+
+Her Pale Face:
+class9summonburst: 7099207419 plays every time easy lover is summoned, even during moves
+
+The Subject’s Elixir:
+class9teleport: 7099207366 plays on teleport
+
+The Hellion’s Wheel:
+class9pale: 7099336059 plays on casting an attack on an enemy with full hp
+
+The Dreamer’s Nightmare:
+class9dreamer: 7099208987 plays on combo gained
+
+(They) Do Not Stop Crying:
+class9cry: 7099209204 plays on use
+
+This Ability:
+class9summonsmall: 7099207606 plays on use
+class9knifeshing: 7099208392 plays on fire
+class9knifemiss: 7099208436 plays if knife hits a wall
+class9knifehit: 7099208545 plays if knife hits
+class9disappear: 7099209057 plays on end
 ______________________________________________________________
 
 Dreamer:
@@ -1992,6 +2052,10 @@ Added Hellion and Buffoon to Hosts
 Added changelog to main site
 Added Light Beneath Closed Eyes boss
 Added Artisan's and Visitor's upgrades
+
+0.0.9:
+Added Parting's class9kickwall to his section
+Added Subject's and Parting's upgrades
 `,
 };
 
